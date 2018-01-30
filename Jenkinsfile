@@ -15,10 +15,10 @@ node('master'){
             junit 'testResult/*.xml'
         }
 
-        stage('archive'{
+        stage('archive'){
             archiveArtifacts "src/**/*"
             archiveArtifacts "package.json"
-        })
+        }
 
     }
     catch(error){
